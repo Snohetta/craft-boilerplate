@@ -1,0 +1,40 @@
+{#
+ # Base
+ # -------------------
+ #
+ #}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nb-NO">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <title>{% if entry.type != 'frontpage' %}{{entry.title}} — {{ siteName }}{% else %}{{ siteName }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="referrer" content="origin-when-cross-origin" />
+    <link rel="stylesheet" href="{{siteUrl}}assets/style.css" />
+    <link rel="shortcut icon" href="{{ siteUrl }}assets/img/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ siteUrl }}assets/img/apple-touch-icon.png">
+   
+
+</head>
+
+
+<body class="no-js">
+    
+    <div id="page">
+        <div class="site {{entry.slug}} {{entry.type}}">
+        
+    </div><!-- .site -->
+</div><!-- #page -->
+<script>
+    document.body.className = document.body.className.replace("no-js","js");
+</script>
+
+<!-- <script src="{{siteUrl}}assets/js/jquery.min.js"></script>
+<script src="{{siteUrl}}assets/js/velocity.min.js"></script>
+<script src="{{siteUrl}}assets/js/jquery.smoothState.min.js"></script>
+<script src="{{siteUrl}}assets/js/jquery.inview.min.js"></script>
+<script src="{{siteUrl}}assets/js/site.js"></script> -->
+</body>
+</html>

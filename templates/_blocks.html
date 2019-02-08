@@ -1,0 +1,8 @@
+{% for block in entry.contentBlocks %}
+	{% if block.type == 'blockText' %}
+		{{include('templates/blocks/_text')}}
+	{% elseif block.type == 'blockMedia' %}
+		{{include('templates/blocks/_media')}}
+	{% endif %}
+
+{% endfor  %}
